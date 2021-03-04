@@ -44,14 +44,16 @@ public static ArrayList<Produto> listarProdutos(){
 
   public static Produto buscarProdutoPeloId(ArrayList<Produto> listaDeProdutos , int codigoProduto){
 
-    Produto produto = new Produto();
-		produto.codigo = 1;
-		produto.descricao = "Camisa";
-		produto.valor = 70.00;
+    for(int x = 0; x <= listaDeProdutos.size(); x++){
+      
+      if(listaDeProdutos.get(x).codigo == codigoProduto) {
+          return listaDeProdutos.get(x);
+      }
+    
+    }
 
-        
-
-    return produto;
+      return null;
+    
   }
 
 }
