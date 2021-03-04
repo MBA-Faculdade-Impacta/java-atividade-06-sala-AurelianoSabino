@@ -1,5 +1,3 @@
-package br.com.impacta.lab;
-
 import java.util.ArrayList;
 import br.com.impacta.models.*;
 
@@ -41,18 +39,26 @@ public class JavaSpringTemplateApplication {
 		 * 
 		 * Abaixo um pedaço do exercicio como base
 		 */
-		ArrayList<Produto> listaDeProdutos = new ArrayList<>();
+		// ArrayList<Produto> listaDeProdutos = new ArrayList<>();
 		
-		Produto produto = new Produto();
-		produto.codigo = 1;
-		produto.descricao = "Camisa";
-		produto.valor = 70.00;
+		// Produto produto = new Produto();
+		// produto.codigo = 1;
+		// produto.descricao = "Camisa";
+		// produto.valor = 70.00;
 		
-		listaDeProdutos.add(produto);
+		// listaDeProdutos.add(produto);
 		
-		Produto produtoEncontrado = Produto.buscarProdutoPeloId(listaDeProdutos, 1);
+		// Produto produtoEncontrado = Produto.buscarProdutoPeloId(listaDeProdutos, 1);
 		
-		System.out.println(produtoEncontrado);
-	}
+		// System.out.println(produtoEncontrado);
+
+   ArrayList<Produto> listaDeProdutos = Produto.listarProdutos();
+   Produto produtoEncontrado = Produto.buscarProdutoPeloId(listaDeProdutos , 15);
+   System.out.println(produtoEncontrado);
+
+  }
 
 }
+
+
+
